@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Auto Clicker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h2>🎯 Auto Clicker</h2>
+    
+    <div class="status-box">
+      <span id="status-indicator" class="indicator idle"></span>
+      <span id="status-text">Status: Idle</span>
+    </div>
+
+    <div class="control-group">
+      <button id="btn-select" class="btn primary">Select Area</button>
+      <div id="selection-info" class="info-text">No target selected</div>
+    </div>
+
+    <div class="control-group">
+      <label for="input-delay">Delay (seconds):</label>
+      <input type="number" id="input-delay" min="0.1" step="0.1" value="5">
+    </div>
+
+    <div class="control-group inline">
+      <label for="toggle-repeat">Repeat clicking:</label>
+      <label class="switch">
+        <input type="checkbox" id="toggle-repeat">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div class="control-group inline">
+      <label for="toggle-refresh">Refresh after click:</label>
+      <label class="switch">
+        <input type="checkbox" id="toggle-refresh">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div class="control-group">
+      <label for="input-refresh-delay">Refresh Delay (seconds):</label>
+      <input type="number" id="input-refresh-delay" min="0.1" step="0.1" value="2">
+    </div>
+
+    <div class="control-group">
+      <label for="input-webhook">Discord Webhook (Optional):</label>
+      <input type="text" id="input-webhook" placeholder="https://discord.com/api/webhooks/...">
+    </div>
+
+    <div class="actions">
+      <button id="btn-start" class="btn success" disabled>Start</button>
+      <button id="btn-stop" class="btn danger" disabled>Stop</button>
+    </div>
+
+    <div class="footer-hint">
+      Shortcut: Ctrl+Shift+X (Cmd+Shift+X) to start/stop
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
